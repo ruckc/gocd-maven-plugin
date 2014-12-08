@@ -23,4 +23,9 @@
         <input id="debug" type="hidden" ng-model="Debug" value="{{Debug}}">
         <label for="debug">Adds -X enable debug mode</label>
     </div>
+    <div class="checkbox_row">
+        <input id="batch2" type="checkbox" ng-model="Batch2" ng-init="Batch2 = Batch" ng-change="Batch = Batch2" ng-true-value="true" ng-false-value="false" checked="checked">
+        <input id="batch" type="hidden" ng-model="Batch" value="{{Batch}}">
+        <label for="batch">Adds -B to enable batch (non-interactive) mode</label>
+    </div>
 </div>

@@ -3,9 +3,18 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.ruck</groupId>
     <artifactId>gocd-maven-plugin</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
-    <description>gocd task plugin for maven builds</description>
+    <description>maven task plugin for GoCD</description>
+    <url>https://github.com/ruckc/gocd-maven-plugin</url>
+    <developers>
+        <developer>
+            <id>ruckc</id>
+            <name>Curtis Ruck</name>
+            <url>https://github.com/ruckc</url>
+        </developer>
+    </developers>
+    <inceptionYear>2014</inceptionYear>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>

@@ -23,6 +23,7 @@ public class MavenTask implements Task {
     public static final String OFFLINE_KEY = "Offline";
     public static final String QUIET_KEY = "Quiet";
     public static final String DEBUG_KEY = "Debug";
+    public static final String BATCH_KEY = "Batch";
 
     @Override
     public TaskConfig config() {
@@ -32,6 +33,7 @@ public class MavenTask implements Task {
         config.addProperty(OFFLINE_KEY);
         config.addProperty(QUIET_KEY);
         config.addProperty(DEBUG_KEY);
+        config.addProperty(BATCH_KEY).withDefault("true");
         return config;
     }
 
@@ -42,22 +44,7 @@ public class MavenTask implements Task {
 
     @Override
     public TaskView view() {
-        return new TaskView() {
-
-            @Override
-            public String displayValue() {
-                return "Maven";
-            }
-
-            @Override
-            public String template() {
-                try {
-                    return IOUtils.toString(getClass().getResourceAsStream("/views/maventask.template.html"));
-                } catch (IOException ex) {
-                    return "Failed to find template: " + ex.getMessage();
-                }
-            }
-        };
+        return new MavenTaskView();
     }
 
     @Override

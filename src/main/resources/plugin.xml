@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<go-plugin id="io.ruck.maven" version="1">
+<go-plugin id="maven" version="1">
     <about>
         <name>Maven plugin</name>
         <version>${project.version}</version>
