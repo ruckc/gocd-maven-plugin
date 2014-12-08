@@ -1,0 +1,26 @@
+<div class="form_item_block">
+    <label for="arguments">Arguments:<span class="asterisk">*</span></label>
+    <input id="arguments" name="arguments" type="text" ng-model="Arguments" ng-required="true"/>
+</div>
+<div class="form_item_block">
+    <label for="profiles">Profiles:</label>
+    <input id="profiles" name="profiles" type="text" ng-model="Profiles" ng-required="false"/>
+</div>
+<div class="form_item_block">
+    <label>Flags:</label>
+    <div class="checkbox_row">
+        <input id="offline2" type="checkbox" ng-model="Offline2" ng-init="Offline2 = Offline" ng-change="Offline = Offline2" ng-true-value="true" ng-false-value="false">
+        <input id="offline" type="hidden" ng-model="Offline" value="{{Offline}}">
+        <label for="offline">Adds -o enable offline mode</label>
+    </div>
+    <div class="checkbox_row">
+        <input id="quiet2" type="checkbox" ng-model="Quiet2" ng-init="Quiet2 = Quiet" ng-change="Quiet = Quiet2" ng-true-value="true" ng-false-value="false">
+        <input id="quiet" type="hidden" ng-model="Quiet" value="{{Quiet}}">
+        <label for="offline">Adds -q enable quiet mode</label>
+    </div>
+    <div class="checkbox_row">
+        <input id="debug2" type="checkbox" ng-model="Debug2" ng-init="Debug2 = Debug" ng-change="Debug = Debug2" ng-true-value="true" ng-false-value="false">
+        <input id="debug" type="hidden" ng-model="Debug" value="{{Debug}}">
+        <label for="debug">Adds -X enable debug mode</label>
+    </div>
+</div>

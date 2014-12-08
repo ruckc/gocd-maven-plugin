@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<go-plugin id="io.ruck.maven" version="1">
+    <about>
+        <name>Maven plugin</name>
+        <version>${project.version}</version>
+        <target-go-version>14.1</target-go-version>
+        <description>Maven Go plugin</description>
+        <vendor>
+            <name>ruckc</name>
+            <url>https://github.com/ruckc</url>
+        </vendor>
+        <target-os>
+            <value>Linux</value>
+            <value>Windows</value>
+            <value>Mac OS X</value>
+        </target-os>
+    </about>
+</go-plugin>
