@@ -37,13 +37,13 @@ public class MavenTaskExecutor implements TaskExecutor {
             if(exitCode != 0) {
                 return ExecutionResult.failure("Build failure");
             }
-        } catch(Throwable t) {
+        } catch(Exception t) {
             console.printLine(t.getMessage());
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
             t.printStackTrace(pw);
             console.printLine(sw.toString());
-            return ExecutionResult.failure("Build failure: "+t.getMessage());
+            return ExecutionResult.failure("Build failure: "+t.getMessage(), t);
         }
         
         return ExecutionResult.success("Build success");
