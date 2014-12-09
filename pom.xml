@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.ruck</groupId>
     <artifactId>gocd-maven-plugin</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
     <description>maven task plugin for GoCD</description>
     <url>https://github.com/ruckc/gocd-maven-plugin</url>
@@ -36,14 +36,10 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.4</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
@@ -67,7 +63,8 @@
                         <configuration>
                             <outputDirectory>${project.build.directory}/classes/lib</outputDirectory>
                             <overWriteSnapshots>true</overWriteSnapshots>
-                            <excludeScope>provided</excludeScope>
+                            <includeScope>compile</includeScope>
+                            <excludeGroupIds>com.thoughtworks.go</excludeGroupIds>
                         </configuration>
                     </execution>
                 </executions>

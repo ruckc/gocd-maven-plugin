@@ -2,7 +2,6 @@ package io.ruck.maven.gocd.plugin;
 
 import com.thoughtworks.go.plugin.api.task.TaskView;
 import java.io.IOException;
-import org.apache.commons.io.IOUtils;
 
 /**
  *
