@@ -48,7 +48,7 @@ public class MavenTask implements Task {
     public ValidationResult validate(TaskConfig tc) {
         ValidationResult result = new ValidationResult();
         if (StringUtils.isBlank(tc.getValue(ARGUMENTS_KEY))) {
-            result.addError(new ValidationError(ARGUMENTS_KEY, "Arguments arer equired"));
+            result.addError(new ValidationError(ARGUMENTS_KEY, "Arguments are required"));
         }
         return result;
     }
