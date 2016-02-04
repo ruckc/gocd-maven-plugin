@@ -78,6 +78,10 @@ public class MavenTaskExecutor implements TaskExecutor {
             command.add("-p");
             command.add(tc.getValue(MavenTask.PROFILES_KEY));
         }
+        if (!StringUtils.isBlank(tc.getValue(MavenTask.FILE_KEY))) {
+            command.add("-f");
+            command.add(tc.getValue(MavenTask.FILE_KEY));
+        }
 
         command.addAll(Arrays.asList(tc.getValue(MavenTask.ARGUMENTS_KEY).split("\\s+")));
 
