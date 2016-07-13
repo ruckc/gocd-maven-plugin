@@ -57,7 +57,7 @@ public class MavenTaskExecutor implements TaskExecutor {
         Map<String, String> env = tec.environment().asMap();
 
         if (env.containsKey("M2_HOME")) {
-            command.add(new File(env.get("M2_HOME"), "mvn").getPath());
+            command.add(new File(env.get("M2_HOME")+"/bin", "mvn").getPath());
         } else {
             command.add("mvn");
         }
