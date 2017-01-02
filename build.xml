@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="KMK DPMS" default="help" basedir=".">
+
+    <property environment="go" />
+    <target name="all">
+        <echo message="Building all!" />
+        <echo message="GO_SERVER_URL: ${go.GO_SERVER_URL}" />
+        <echo message="GO_PIPELINE_NAME: ${go.GO_PIPELINE_NAME}" />
+        <echo message="GO_PIPELINE_COUNTER: ${go.GO_PIPELINE_COUNTER}" />
+        <echo message="GO_PIPELINE_LABEL: ${go.GO_PIPELINE_LABEL}" />
+        <echo message="GO_STAGE_NAME: ${go.GO_STAGE_NAME}" />
+        <echo message="GO_STAGE_COUNTER: ${go.GO_STAGE_COUNTER}" />
+        <echo message="GO_JOB_NAME: ${go.GO_JOB_NAME}" />
+        <echo message="GO_REVISION: ${go.GO_REVISION}" />
+    </target>
+
+</project>

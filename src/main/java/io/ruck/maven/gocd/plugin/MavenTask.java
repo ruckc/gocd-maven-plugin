@@ -21,6 +21,7 @@ public class MavenTask implements Task {
     public static final String QUIET_KEY = "Quiet";
     public static final String DEBUG_KEY = "Debug";
     public static final String BATCH_KEY = "Batch";
+    public static final String FILE_KEY = "File";
 
     @Override
     public TaskConfig config() {
@@ -30,6 +31,7 @@ public class MavenTask implements Task {
         config.addProperty(OFFLINE_KEY);
         config.addProperty(QUIET_KEY);
         config.addProperty(DEBUG_KEY);
+        config.addProperty(FILE_KEY);
         config.addProperty(BATCH_KEY).withDefault("true");
         return config;
     }
@@ -48,7 +50,7 @@ public class MavenTask implements Task {
     public ValidationResult validate(TaskConfig tc) {
         ValidationResult result = new ValidationResult();
         if (StringUtils.isBlank(tc.getValue(ARGUMENTS_KEY))) {
-            result.addError(new ValidationError(ARGUMENTS_KEY, "Arguments arer equired"));
+            result.addError(new ValidationError(ARGUMENTS_KEY, "Arguments are required"));
         }
         return result;
     }
